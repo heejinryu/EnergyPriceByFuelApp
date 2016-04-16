@@ -71,7 +71,9 @@ class GraphView: UIView {
         for _ in 0 ..< numberOfBars {
             // Generate a new bar
             let bar = UIView()
-            bar.backgroundColor = UIColor.greenColor()
+            
+            // Mei - We can pick the bar colors here.
+            bar.backgroundColor = UIColor(red: 0.9059, green: 0.9882, blue: 0.2941, alpha: 1.0)
             addSubview(bar)
             
             // Set constraints

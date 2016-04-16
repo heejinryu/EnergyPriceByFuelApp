@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SnapKit
+import pop
 
 class ViewController: UIViewController, GraphDelegate {
 
     @IBOutlet weak var graph: GraphView!
+
+    var energyPrices = [wind.totalCost(), solar.totalCost(), hydro.totalCost(), coal.totalCost(), gas.totalCost(), oil.totalCost(), nuclear.totalCost(), biomass.totalCost()]
     
-    var energyPrices = [192, 188, 160, 170, 100, 90]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +35,10 @@ class ViewController: UIViewController, GraphDelegate {
         return energyPrices.count
     }
     
+//  Mei - I force upwrapped energyPrices.maxElement() as it should always have max value.  but we can change that if you'd like. 
+    
     func maximumValueForGraphView(graphView: GraphView) -> CGFloat? {
-        return 200
+        return CGFloat(energyPrices.maxElement()!)
     }
     
     func valueForBarAtIndexForGraphView(graphView: GraphView, index: Int) -> CGFloat {
@@ -41,6 +46,7 @@ class ViewController: UIViewController, GraphDelegate {
     }
     
     func spacingInBetweenBars(graphView: GraphView) -> CGFloat {
-        return 100
+        return 60
     }
+    
 }

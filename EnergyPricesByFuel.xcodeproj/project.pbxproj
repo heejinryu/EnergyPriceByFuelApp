@@ -12,6 +12,7 @@
 		897DB4771CC2B8EB0060FBC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897DB4751CC2B8EB0060FBC4 /* Main.storyboard */; };
 		897DB4791CC2B8EB0060FBC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897DB4781CC2B8EB0060FBC4 /* Assets.xcassets */; };
 		897DB47C1CC2B8EB0060FBC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897DB47A1CC2B8EB0060FBC4 /* LaunchScreen.storyboard */; };
+		89B6C30E1CC2D25B0053F7CC /* EnergyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6C30D1CC2D25B0053F7CC /* EnergyPrice.swift */; };
 		89DB528D1CC2BFBA008053AF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB528C1CC2BFBA008053AF /* GraphView.swift */; };
 		C8BB8CE8AAC02ACC57E223C2 /* Pods_EnergyPricesByFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C063BC07BBE2B3462783B578 /* Pods_EnergyPricesByFuel.framework */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		897DB4781CC2B8EB0060FBC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		897DB47B1CC2B8EB0060FBC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897DB47D1CC2B8EB0060FBC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B6C30D1CC2D25B0053F7CC /* EnergyPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyPrice.swift; sourceTree = "<group>"; };
 		89DB528C1CC2BFBA008053AF /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		8A8B52259EF636BCCC7C3A5F /* Pods-EnergyPricesByFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnergyPricesByFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnergyPricesByFuel/Pods-EnergyPricesByFuel.release.xcconfig"; sourceTree = "<group>"; };
 		C063BC07BBE2B3462783B578 /* Pods_EnergyPricesByFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnergyPricesByFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				897DB4731CC2B8EB0060FBC4 /* ViewController.swift */,
+				89B6C30D1CC2D25B0053F7CC /* EnergyPrice.swift */,
 				897DB4751CC2B8EB0060FBC4 /* Main.storyboard */,
 				89DB528C1CC2BFBA008053AF /* GraphView.swift */,
 				897DB4831CC2B9070060FBC4 /* Supporting Files */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897DB4741CC2B8EB0060FBC4 /* ViewController.swift in Sources */,
+				89B6C30E1CC2D25B0053F7CC /* EnergyPrice.swift in Sources */,
 				897DB4721CC2B8EB0060FBC4 /* AppDelegate.swift in Sources */,
 				89DB528D1CC2BFBA008053AF /* GraphView.swift in Sources */,
 			);
