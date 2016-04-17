@@ -23,6 +23,7 @@ class ViewController: UIViewController, GraphDelegate {
         
         view.backgroundColor = UIColor(red: 0.733, green: 0.82, blue: 0, alpha: 1.0)
         graph.delegate = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -51,5 +52,4 @@ class ViewController: UIViewController, GraphDelegate {
     func spacingInBetweenBars(graphView: GraphView) -> CGFloat {
         return 60
     }
-    
 }

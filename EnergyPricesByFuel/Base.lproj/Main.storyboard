@@ -22,7 +22,6 @@
                                 <rect key="frame" x="70" y="120" width="510" height="430"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HBo-Te-FKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="9LX-PP-13t"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HBo-Te-FKr" secondAttribute="bottom" constant="50" id="Kj9-BB-VG5"/>

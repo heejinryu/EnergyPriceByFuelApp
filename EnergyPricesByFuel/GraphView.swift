@@ -76,6 +76,14 @@ class GraphView: UIView {
             bar.backgroundColor = UIColor(red: 0.996, green: 0.349, blue: 0.647, alpha: 1.0)
             addSubview(bar)
             
+            // Mei - Add Lable to show prices.  I haven't figured out how to dynamically change the prices.  Let's ask to Thomas later.
+            
+            let label = UILabel(frame: CGRectMake(0, 10, 250, 50))
+            label.textAlignment = NSTextAlignment.Left
+            label.text = "Solar: $ \(solar.totalCost())"
+            label.textColor = UIColor(red: 0.196, green: 0.349, blue: 0.947, alpha: 1.0)
+            bar.addSubview(label)
+            
             // Set constraints
             bar.snp_makeConstraints(closure: { (make) in
                 make.left.equalTo(0)
