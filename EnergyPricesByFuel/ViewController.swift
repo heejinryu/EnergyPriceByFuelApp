@@ -19,6 +19,9 @@ class ViewController: UIViewController, GraphDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//  Mei - You can change the background color here to black if you'd like.
+        
+        view.backgroundColor = UIColor(red: 0.733, green: 0.82, blue: 0, alpha: 1.0)
         graph.delegate = self
     }
     
