@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  EnergyPricesByFuel
 //
-//  Created by HEEJIN RYU on 4/16/16.
-//  Copyright © 2016 HEEJIN RYU. All rights reserved.
+//  Created by HEEJIN RYU, MEI TAO on 4/16/16.
+//  Copyright © 2016 HEEJIN RYU & MEI TAO. All rights reserved.
 //
 
 import UIKit
