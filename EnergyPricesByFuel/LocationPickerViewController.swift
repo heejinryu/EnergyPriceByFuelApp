@@ -2,14 +2,14 @@
 //  LocationPickerViewController.swift
 //  EnergyPricesByFuel
 //
-//  Created by Mei Tao on 4/20/16.
-//  Copyright © 2016 HEEJIN RYU. All rights reserved.
+//  Created by HEEJIN RYU, MEI TAO on 4/16/16.
+//  Copyright © 2016 HEEJIN RYU & MEI TAO. All rights reserved.
 //
 
 import UIKit
 
 class LocationPickerViewController: UITableViewController {
-
+    var states = [[String:AnyObject]]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +34,7 @@ class LocationPickerViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return states.count
     }
 
     /*
