@@ -9,15 +9,20 @@
 import UIKit
 
 class LocationPickerViewController: UITableViewController {
-    var states = [[String:AnyObject]]()
+    var locations = [[String:AnyObject]]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // load the states as an array of dicts from the plist "states"
+        let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")
+        if let path = plistPath, let states = NSArray(contentsOfFile: path) {
+            print(states)
+            let s = states as! [NSDictionary]
+            for state in s {
+                print(state)
+                locations.append(state as! [String: AnyObject])
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +39,7 @@ class LocationPickerViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return states.count
+        return locations.count
     }
 
     /*

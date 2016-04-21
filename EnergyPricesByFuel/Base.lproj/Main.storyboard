@@ -35,6 +35,9 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Location"/>
+                                <connections>
+                                    <segue destination="JIN-ns-cWX" kind="presentation" id="HTA-94-kEF"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -73,7 +76,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S4I-M8-Vdc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S4I-M8-Vdc" userLabel="LocationCell">
                                 <rect key="frame" x="0.0" y="160" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S4I-M8-Vdc" id="ts7-n3-34v">
@@ -90,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gb-xv-eK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="384"/>
+            <point key="canvasLocation" x="1009" y="389"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IaD-eV-YQQ">
