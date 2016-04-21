@@ -21,7 +21,7 @@ class ViewController: UIViewController, GraphDelegate {
         
 //  Mei - You can change the background color here to black if you'd like.
         
-        view.backgroundColor = UIColor(red: 0.733, green: 0.82, blue: 0, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
         graph.delegate = self
         
     }
