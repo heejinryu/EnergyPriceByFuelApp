@@ -9,18 +9,17 @@
 import UIKit
 
 class LocationPickerViewController: UITableViewController {
+    let defaults = NSUserDefaults.standardUserDefaults()
     var locations = [[String:String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // load the states as an array of dicts from the plist "states"
         let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")
         if let path = plistPath, let states = NSArray(contentsOfFile: path) {
-            // print(states)
             let s = states as! [NSDictionary]
             for state in s {
-                // print(state)
-                // print(state["fullname"])
                 locations.append(state as! [String: String])
             }
             print(locations[1]["fullname"])
@@ -31,19 +30,23 @@ class LocationPickerViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return locations.count
     }
 
-    
+    // load each location from array "locations" to the table view
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
-
         cell.textLabel?.text = locations[indexPath.row]["fullname"]
         cell.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
         cell.textLabel?.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
 
         return cell
+    }
+    
+    // save selected location to UseDefaults backend
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 
