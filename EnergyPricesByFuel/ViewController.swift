@@ -9,10 +9,12 @@
 import UIKit
 import SnapKit
 import pop
+import Foundation
 
 class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
 
     @IBOutlet weak var graph: GraphView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let networkHelper = NetworkHelper()
     
@@ -28,6 +30,8 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
 
         view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
         graph.delegate = self
+        titleLabel.font = UIFont(name: "AvenirNext-DemiBold", size: 20)
+        titleLabel.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
         
     }
     
@@ -62,7 +66,6 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         return fuel.count
     }
     
-//  Mei - I force upwrapped energyPrices.maxElement() as it should always have max value.  but we can change that if you'd like. 
     
     func maximumValueForGraphView(graphView: GraphView) -> CGFloat? {
         let costs = fuel.map { fuel in
@@ -78,7 +81,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     }
     
     func spacingInBetweenBars(graphView: GraphView) -> CGFloat {
-        return 50
+        return graphView.bounds.size.height * 0.1
     }
     
     func getLabelForGraphView(graphView: GraphView, atIndex index: Int) -> String {

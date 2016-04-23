@@ -63,10 +63,11 @@ class GraphView: UIView {
         
         let spaceInBetween = delegate!.spacingInBetweenBars(self)
         
-        // The available height for drawing minus the space in between minus one (let's assume 4 bars is only 3 gaps)
+        // The available height for drawing minus the space in between minus one
         let sumHeight = self.frame.height - CGFloat(CGFloat(numberOfBars - 1) * spaceInBetween)
         let heightOffset = 1 / CGFloat(numberOfBars)
         let barHeight = sumHeight * heightOffset
+        print("bar height is \(barHeight)")
         
         var previousBar: UIView?
         for i in 0 ..< numberOfBars {
@@ -75,11 +76,11 @@ class GraphView: UIView {
             
             addSubview(bar)
             
-            let label = UILabel(frame: CGRectMake(0, 10, 250, 50))
+            let label = UILabel(frame: CGRectMake(0, barHeight - 8, 250, 50))
             label.textAlignment = NSTextAlignment.Left
             label.text = delegate!.getLabelForGraphView(self, atIndex: i)
             label.font = UIFont(name: "AvenirNext-DemiBold", size: 15)
-            label.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
+            label.textColor = UIColor.whiteColor()
             bar.addSubview(label)
             
             // Set constraints
@@ -107,7 +108,7 @@ class GraphView: UIView {
             bars.append(bar)
         }
     }
-    
+
     private func showRelativeBars() {
         var delay = 0.0
         
@@ -142,7 +143,7 @@ class GraphView: UIView {
             delay += 0.2
         }
     }
-    
+
     private func showAbsoluteBars() {
         var delay = 0.0
         
@@ -161,7 +162,7 @@ class GraphView: UIView {
             delay += 0.2
         }
     }
-    
+
     private func removeSubViews() {
         for view in bars {
             view.removeFromSuperview()
