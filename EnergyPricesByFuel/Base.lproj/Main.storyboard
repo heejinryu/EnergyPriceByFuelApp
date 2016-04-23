@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="8zt-Do-9Cr">
                         <barButtonItem key="rightBarButtonItem" title="Location" id="uMj-Uc-esS">
                             <connections>
-                                <segue destination="JIN-ns-cWX" kind="presentation" id="6RI-B5-Lmv"/>
+                                <segue destination="JIN-ns-cWX" kind="presentation" identifier="showLocationPicker" id="6RI-B5-Lmv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

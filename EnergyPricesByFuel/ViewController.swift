@@ -37,7 +37,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
             networkHelper.loadGasPriceForState(location)
             userLocation = location
         } else {
-            //present location picker
+            performSegueWithIdentifier("showLocationPicker", sender: self)
         }
         print(userLocation)
     }

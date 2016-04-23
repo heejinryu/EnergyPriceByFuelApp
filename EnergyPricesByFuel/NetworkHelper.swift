@@ -108,7 +108,7 @@ class NetworkHelper {
 var wind = Fuel(fuelType: "Wind", levelizedCapitalCost: 58, fixedCost: 13, variableCostWithFuel: 0, transmissionInvestment: 3)
 
 //Solar PV
-var solar = Fuel(fuelType: "Solar", levelizedCapitalCost: 110, fixedCost: 11, variableCostWithFuel: 0, transmissionInvestment: 4)
+var solar = Fuel(fuelType: "Solar PV", levelizedCapitalCost: 110, fixedCost: 11, variableCostWithFuel: 0, transmissionInvestment: 4)
 
 //Hydroelectric
 var hydro = Fuel(fuelType: "Hydro", levelizedCapitalCost: 71, fixedCost: 4, variableCostWithFuel: 7, transmissionInvestment: 2)
@@ -118,7 +118,7 @@ var coal = Fuel(fuelType: "Coal", levelizedCapitalCost: 60, fixedCost: 4, variab
 
 // Natural Gas-fired Conventional Combined Cycle
 // 1 megawatt hours = 3.41214 mcf (thousand cubic feet) of natural gas
-var gas = Fuel(fuelType: "Gas", levelizedCapitalCost: 14, fixedCost: 2, variableCostWithFuel: 57, transmissionInvestment: 1)
+var gas = Fuel(fuelType: "Natural Gas", levelizedCapitalCost: 14, fixedCost: 2, variableCostWithFuel: 57, transmissionInvestment: 1)
 
 // Conventional Combustion Turbine
 var oil = Fuel(fuelType: "Oil", levelizedCapitalCost: 41, fixedCost: 3, variableCostWithFuel: 45, transmissionInvestment: 4)
