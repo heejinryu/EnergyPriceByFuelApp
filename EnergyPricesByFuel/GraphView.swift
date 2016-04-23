@@ -15,6 +15,7 @@ protocol GraphDelegate {
     func maximumValueForGraphView(graphView: GraphView) -> CGFloat?
     func valueForBarAtIndexForGraphView(graphView: GraphView, index: Int) -> CGFloat
     func spacingInBetweenBars(graphView: GraphView) -> CGFloat
+    func getLabelForGraphView(graphView: GraphView, atIndex index: Int) -> String
 }
 
 class GraphView: UIView {
@@ -24,6 +25,7 @@ class GraphView: UIView {
     private var bars = [UIView]()
     private var widthConstraints = [NSLayoutConstraint]()
     private var numberOfBars = 0
+    private var labels = [String]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -63,24 +65,22 @@ class GraphView: UIView {
         let spaceInBetween = delegate!.spacingInBetweenBars(self)
         
         // The available height for drawing minus the space in between minus one (let's assume 4 bars is only 3 gaps)
-        let drawHeight = self.frame.height - CGFloat(CGFloat(numberOfBars - 1) * spaceInBetween)
+        let sumHeight = self.frame.height - CGFloat(CGFloat(numberOfBars - 1) * spaceInBetween)
         let heightOffset = 1 / CGFloat(numberOfBars)
-        let barHeight = drawHeight * heightOffset
+        let barHeight = sumHeight * heightOffset
         
         var previousBar: UIView?
-        for _ in 0 ..< numberOfBars {
+        for i in 0 ..< numberOfBars {
             // Generate a new bar
-            let bar = UIView()
+            let bar = BarView()
             
-            // Mei - We can pick the bar colors here. Black background with Green looked too dry so I changed to more feminie color but feel free to change it back.
             bar.backgroundColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
+            bar.layer.cornerRadius = 5
             addSubview(bar)
-            
-            // Mei - Add Lable to show prices.  I haven't figured out how to dynamically change the prices.  Let's ask to Thomas later.
             
             let label = UILabel(frame: CGRectMake(0, 10, 250, 50))
             label.textAlignment = NSTextAlignment.Left
-            label.text = "Solar: $ \(solar.totalCost())"
+            label.text = delegate!.getLabelForGraphView(self, atIndex: i)
             label.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
             bar.addSubview(label)
             

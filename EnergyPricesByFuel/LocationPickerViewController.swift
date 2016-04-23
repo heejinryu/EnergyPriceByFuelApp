@@ -22,7 +22,7 @@ class LocationPickerViewController: UITableViewController {
             for state in s {
                 locations.append(state as! [String: String])
             }
-            print(locations[1]["fullname"])
+            // print(locations[1]["fullname"])
         }
     }
 
@@ -38,14 +38,15 @@ class LocationPickerViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
         cell.textLabel?.text = locations[indexPath.row]["fullname"]
         cell.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
-        cell.textLabel?.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
+        cell.textLabel?.textColor = UIColor.whiteColor()
 
         return cell
     }
     
     // save selected location to UseDefaults backend
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let loc = defaults.setValue(locations[indexPath.row]["code"], forKey: "userlocation")
+        print("\(loc) set to default")
         dismissViewControllerAnimated(true, completion: nil)
     }
 

@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-Te-FKr" customClass="GraphView" customModule="EnergyPricesByFuel">
-                                <rect key="frame" x="70" y="120" width="510" height="430"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-Te-FKr" customClass="GraphView" customModule="EnergyPricesByFuel">
+                                <rect key="frame" x="70" y="164" width="510" height="386"/>
                             </view>
                         </subviews>
                         <constraints>
@@ -30,15 +30,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8zt-Do-9Cr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="5bE-vz-WDw">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mlu-Fg-2HW">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Location"/>
-                                <connections>
-                                    <segue destination="JIN-ns-cWX" kind="presentation" id="HTA-94-kEF"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Location" id="uMj-Uc-esS">
+                            <connections>
+                                <segue destination="JIN-ns-cWX" kind="presentation" id="6RI-B5-Lmv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
