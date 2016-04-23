@@ -7,10 +7,40 @@
 //
 
 import UIKit
+import CoreLocation
 
-class LocationPickerViewController: UITableViewController {
+class LocationPickerViewController: UITableViewController, CLLocationManagerDelegate {
     let defaults = NSUserDefaults.standardUserDefaults()
+    let locationManager = CLLocationManager()
     var locations = [[String:String]]()
+    
+    @IBAction func getCurrentLocation(sender: UIButton) {
+        // request permission for user location acess
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        
+        CLGeocoder().reverseGeocodeLocation(newLocation) { (results, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            for placemark in results! {
+                print("\(placemark) \n\n ------------")
+            }
+            
+            if results?.count > 0 {
+                let place = results![0]
+                print("We found you at \(place.thoroughfare) \(place.locality)")
+            }
+        }
+        
+        locationManager.stopUpdatingLocation()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +55,6 @@ class LocationPickerViewController: UITableViewController {
             // print(locations[1]["fullname"])
         }
     }
-
 
     // MARK: - Table view data source
 
@@ -45,8 +74,7 @@ class LocationPickerViewController: UITableViewController {
     
     // save selected location to UseDefaults backend
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let loc = defaults.setValue(locations[indexPath.row]["code"], forKey: "userlocation")
-        print("\(loc) set to default")
+        defaults.setValue(locations[indexPath.row]["code"], forKey: "userlocation")
         dismissViewControllerAnimated(true, completion: nil)
     }
 

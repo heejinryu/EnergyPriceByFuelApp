@@ -28,7 +28,7 @@ class Fuel {
     }
     
     func getLabel() -> String {
-        return "\(fuelType): $\(self.totalCost()) /MWh"
+        return "\(fuelType): $\(self.totalCost()) / MWh"
     }
 }
 

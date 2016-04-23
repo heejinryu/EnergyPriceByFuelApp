@@ -37,6 +37,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        // check if a location is saved to userdefaults
         if let location = defaults.stringForKey("userlocation") {
             networkHelper.loadGasPriceForState(location)
             userLocation = location

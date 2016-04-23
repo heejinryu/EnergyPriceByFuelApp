@@ -66,17 +66,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="132"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use my current location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot4-Sh-3x5">
-                                    <rect key="frame" x="209" y="56" width="183" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-0p-UL3">
+                                    <rect key="frame" x="218" y="51" width="164" height="30"/>
+                                    <state key="normal" title="Use my current location">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="getCurrentLocation:" destination="JIN-ns-cWX" eventType="touchUpInside" id="RDy-3O-YXW"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="ot4-Sh-3x5" firstAttribute="centerX" secondItem="1T7-Yp-wiD" secondAttribute="centerX" id="B1a-r2-5xH"/>
-                                <constraint firstItem="ot4-Sh-3x5" firstAttribute="centerY" secondItem="1T7-Yp-wiD" secondAttribute="centerY" id="Ter-IW-Qt0"/>
+                                <constraint firstItem="yQF-0p-UL3" firstAttribute="centerX" secondItem="1T7-Yp-wiD" secondAttribute="centerX" id="OPU-3s-0k6"/>
+                                <constraint firstItem="yQF-0p-UL3" firstAttribute="centerY" secondItem="1T7-Yp-wiD" secondAttribute="centerY" id="oMi-EV-8nV"/>
                             </constraints>
                         </view>
                         <prototypes>
