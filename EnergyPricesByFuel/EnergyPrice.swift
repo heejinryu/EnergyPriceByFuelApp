@@ -23,12 +23,12 @@ class Fuel {
         self.transmissionInvestment = transmissionInvestment
     }
     
-    func totalCost() -> Float {
-        return levelizedCapitalCost + fixedCost + variableCostWithFuel + transmissionInvestment
+    func totalCost() -> Int {
+        return Int(levelizedCapitalCost + fixedCost + variableCostWithFuel + transmissionInvestment)
     }
     
     func getLabel() -> String {
-        return "\(fuelType): $\(self.totalCost())"
+        return "\(fuelType): $\(self.totalCost()) /MWh"
     }
 }
 

@@ -3,7 +3,7 @@
 //  EnergyPricesByFuel
 //
 //  Created by Mei Tao on 4/23/16.
-//  Copyright © 2016 HEEJIN RYU. All rights reserved.
+//  Copyright © 2016 HEEJIN RYU, MEI TAO. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class NetworkHelper {
     var delegate: NetworkHelperDelegate?
     
     func loadOilPrice() {
+        // Get Yahoo Finance data for Brent with a query link
         let url = NSURL(string: currentBrentLink)
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
             guard let data = data else {
@@ -71,24 +72,6 @@ class NetworkHelper {
     let eiaLinkBeg = String("https://api.eia.gov/series/?api_key=6495EB74AFCC6C24FFB6500DC2B9AB44&series_id=NG.N3050")
     let eiaLinkEnd = String("3.M")
     
-    func loadYFPrices(link: String) -> Float? {
-        // Get Yahoo Finance data for Henry Hub or Brent with a query link
-        var yfPrice = Float?()
-        let url = NSURL(string:link)
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
-            guard let data = data else {
-                return
-            }
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
-                yfPrice = self.parseYFPriceWithJSON(json)
-            } catch {
-                print("could not read json")
-            }
-        }
-        task.resume()
-        return yfPrice
-    }
     
     func parseYFPriceWithJSON(data: NSDictionary) -> Float? {
         // parse Yahoo finance data and return a Brent or Henry Hub price
@@ -100,26 +83,6 @@ class NetworkHelper {
         }
         print(lastPrice)
         return Float(lastPrice)
-    }
-    
-    func loadEIAPrice(state: String) -> Float? {
-        // Pass on state code to get link and get EIA gas price for the chosen location
-        var eiaPrice = Float?()
-        let link = eiaLinkBeg + state + eiaLinkEnd
-        let url = NSURL(string: link)
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
-            guard let data = data else {
-                return
-            }
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
-                eiaPrice = self.parseEIAGasPriceWithJSON(json)
-            } catch {
-                print("could not read json")
-            }
-        }
-        task.resume()
-        return eiaPrice
     }
     
     func parseEIAGasPriceWithJSON(data: NSDictionary) -> Float? {
@@ -134,28 +97,6 @@ class NetworkHelper {
         }
         print(latestGasPrice)
         return latestGasPrice
-    }
-    
-    // [wind, oil]
-    func getFuelForLocation(state: String, completionHandler: (fuel: [Fuel]) -> Void) {
-        let link = eiaLinkBeg + state + eiaLinkEnd
-        let url = NSURL(string: link)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
-            guard let data = data else {
-                return
-            }
-            
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
-                let price = self.parseEIAGasPriceWithJSON(json)
-                
-            } catch {
-                print("could not read json")
-            }
-        }
-        
-        task.resume()
     }
     
     // data source: https://www.eia.gov/forecasts/aeo/pdf/electricity_generation.pdf
@@ -176,6 +117,7 @@ var hydro = Fuel(fuelType: "Hydro", levelizedCapitalCost: 71, fixedCost: 4, vari
 var coal = Fuel(fuelType: "Coal", levelizedCapitalCost: 60, fixedCost: 4, variableCostWithFuel: 29, transmissionInvestment: 1)
 
 // Natural Gas-fired Conventional Combined Cycle
+// 1 megawatt hours = 3.41214 mcf (thousand cubic feet) of natural gas
 var gas = Fuel(fuelType: "Gas", levelizedCapitalCost: 14, fixedCost: 2, variableCostWithFuel: 57, transmissionInvestment: 1)
 
 // Conventional Combustion Turbine

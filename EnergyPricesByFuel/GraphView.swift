@@ -25,7 +25,6 @@ class GraphView: UIView {
     private var bars = [UIView]()
     private var widthConstraints = [NSLayoutConstraint]()
     private var numberOfBars = 0
-    private var labels = [String]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
