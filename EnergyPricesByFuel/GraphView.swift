@@ -74,13 +74,12 @@ class GraphView: UIView {
             // Generate a new bar
             let bar = BarView()
             
-            bar.backgroundColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
-            bar.layer.cornerRadius = 5
             addSubview(bar)
             
             let label = UILabel(frame: CGRectMake(0, 10, 250, 50))
             label.textAlignment = NSTextAlignment.Left
             label.text = delegate!.getLabelForGraphView(self, atIndex: i)
+            label.font = UIFont(name: "AvenirNext-DemiBold", size: 15)
             label.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
             bar.addSubview(label)
             
