@@ -15,9 +15,10 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     var locations = [[String:String]]()
     
     @IBAction func getCurrentLocation(sender: UIButton) {
-        // request permission for user location acess
+        // request permission for user location acess the first time
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
 //        dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -44,6 +45,8 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
 
         // load the states as an array of dicts from the plist "states"
         let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")

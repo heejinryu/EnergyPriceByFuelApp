@@ -39,12 +39,6 @@ class GraphView: UIView {
             fatalError("Please implement the GraphDelegate")
         }
         
-        // Keeps track if the reloadData has been called once
-        // Reason: we call reloadData in view did appear if initialized is false
-        // We don't want this to happen when a modal dismisses
-        // Calling it in viewDidLoad resulted in accurate frame.width values
-        isInitialized = true
-        
         numberOfBars = delegate!.numberOfBarsInGraphView(self)
         
         // Create the bars
@@ -67,7 +61,6 @@ class GraphView: UIView {
         let sumHeight = self.frame.height - CGFloat(CGFloat(numberOfBars - 1) * spaceInBetween)
         let heightOffset = 1 / CGFloat(numberOfBars)
         let barHeight = sumHeight * heightOffset
-        print("bar height is \(barHeight)")
         
         var previousBar: UIView?
         for i in 0 ..< numberOfBars {
@@ -131,7 +124,7 @@ class GraphView: UIView {
         for (index, constraint) in widthConstraints.enumerate() {
             let valueForIndex = delegate!.valueForBarAtIndexForGraphView(self, index: index)
             let percentage = valueForIndex / maxValue
-            print(percentage)
+            // print(percentage)
             
             let width = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
             width.toValue = drawWidth*percentage

@@ -44,7 +44,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         } else {
             performSegueWithIdentifier("showLocationPicker", sender: self)
         }
-        print(userLocation)
+        print("location code: \(userLocation)")
     }
     
     func didReceiveprices(gas: Fuel, oil: Fuel) {
