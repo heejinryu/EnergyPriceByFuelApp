@@ -19,7 +19,7 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
-//        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
@@ -37,10 +37,10 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
             if results?.count > 0 {
                 let place = results![0]
                 print("We found you at \(place.thoroughfare) \(place.locality)")
+                self.locationManager.stopUpdatingLocation()
             }
         }
         
-        locationManager.stopUpdatingLocation()
     }
     
     override func viewDidLoad() {
