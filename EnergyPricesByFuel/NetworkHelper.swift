@@ -45,6 +45,25 @@ class NetworkHelper {
         task.resume()
     }
     
+    func loadGasPrice() {
+        // Get Yahoo Finance data for Henry Hub with a query link
+        let url = NSURL(string: currentHHLink)
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
+            guard let data = data else {
+                return
+            }
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+                self.gasPrice = self.parseYFPriceWithJSON(json)
+                print("gas price is \(self.gasPrice)")
+                self.checkPricesAvailability()
+            } catch {
+                print("could not read json")
+            }
+        }
+        task.resume()
+    }
+    
     func loadGasPriceForState(state: String) {
         // Pass on state code to get link and get EIA gas price for the chosen location
         let link = eiaLinkBeg + state + eiaLinkEnd
@@ -55,8 +74,13 @@ class NetworkHelper {
             }
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
-                self.gasPrice = self.parseEIAGasPriceWithJSON(json)
-                self.checkPricesAvailability()
+                if self.parseEIAGasPriceWithJSON(json) == nil {
+                    self.loadGasPrice()
+                } else {
+                    self.gasPrice = self.parseEIAGasPriceWithJSON(json)
+                    print("gas price is \(self.gasPrice)")
+                    self.checkPricesAvailability()
+                }
             } catch {
                 print("could not read json")
             }
@@ -104,30 +128,4 @@ class NetworkHelper {
 
 }
 
-// Wind
-var wind = Fuel(fuelType: "Wind", levelizedCapitalCost: 58, fixedCost: 13, variableCostWithFuel: 0, transmissionInvestment: 3)
 
-// Solar PV
-var solar = Fuel(fuelType: "Solar PV", levelizedCapitalCost: 110, fixedCost: 11, variableCostWithFuel: 0, transmissionInvestment: 4)
-
-// Hydroelectric
-var hydro = Fuel(fuelType: "Hydro", levelizedCapitalCost: 71, fixedCost: 4, variableCostWithFuel: 7, transmissionInvestment: 2)
-
-// Conventional Coal
-var coal = Fuel(fuelType: "Coal", levelizedCapitalCost: 60, fixedCost: 4, variableCostWithFuel: 29, transmissionInvestment: 1)
-
-// Natural Gas-fired Conventional Combined Cycle
-var gas = Fuel(fuelType: "Natural Gas", levelizedCapitalCost: 14, fixedCost: 2, variableCostWithFuel: 57, transmissionInvestment: 1)
-// 1 megawatt hours = 3.41214 mcf (thousand cubic feet) of natural gas
-let mcfToMwh = Float(1/3.41214)
-
-// Conventional Combustion Turbine
-var oil = Fuel(fuelType: "Oil", levelizedCapitalCost: 41, fixedCost: 3, variableCostWithFuel: 45, transmissionInvestment: 4)
-// 1 boe = 1.6282 Mwh
-let bblToMwh = Float(1.6282)
-
-// Advanced Nuclear
-var nuclear = Fuel(fuelType: "Nuclear", levelizedCapitalCost: 70, fixedCost: 12, variableCostWithFuel: 12, transmissionInvestment: 1)
-
-// Biomass
-var biomass = Fuel(fuelType: "Biomass", levelizedCapitalCost: 47, fixedCost: 14, variableCostWithFuel: 38, transmissionInvestment: 1)
