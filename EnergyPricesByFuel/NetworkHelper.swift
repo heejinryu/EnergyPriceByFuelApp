@@ -90,8 +90,9 @@ class NetworkHelper {
     
     func checkPricesAvailability() {
         if let gasPrice = gasPrice, oilPrice = oilPrice {
-            oil.variableCostWithFuel = oilPrice / bblToMwh
-            gas.variableCostWithFuel = gasPrice / mcfToMwh
+            // adjust fetched fuel costs with conversion to MWh and adding O&M, assign to class variables
+            oil.variableCostWithFuel = oilPrice * 10 / 6.5
+            gas.variableCostWithFuel = gasPrice * 10
             
             delegate?.didReceiveprices(gas, oil: oil)
         }

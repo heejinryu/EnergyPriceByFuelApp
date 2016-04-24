@@ -27,18 +27,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kCY-4d-JZV" userLabel="Loading Indicator">
+                                <rect key="frame" x="290" y="121" width="20" height="20"/>
+                                <color key="color" red="0.56470588235294117" green="0.83137254901960778" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="HBo-Te-FKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="9LX-PP-13t"/>
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="D5b-ud-gqh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HBo-Te-FKr" secondAttribute="bottom" constant="50" id="Kj9-BB-VG5"/>
+                            <constraint firstItem="kCY-4d-JZV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QBS-9g-nAQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HBo-Te-FKr" secondAttribute="trailing" id="YYn-AV-F5e"/>
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c61-XO-xua"/>
+                            <constraint firstItem="kCY-4d-JZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQE-jZ-dBB"/>
+                            <constraint firstItem="kCY-4d-JZV" firstAttribute="top" secondItem="yPh-dZ-ozG" secondAttribute="bottom" constant="1" id="iqq-Y2-bZY"/>
                             <constraint firstItem="HBo-Te-FKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="xBV-1p-aec"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QBS-9g-nAQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="8zt-Do-9Cr">
                         <barButtonItem key="rightBarButtonItem" title="Location" id="uMj-Uc-esS">
+                            <color key="tintColor" red="0.090196078431372548" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="JIN-ns-cWX" kind="presentation" identifier="showLocationPicker" id="6RI-B5-Lmv"/>
                             </connections>
@@ -46,6 +59,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="graph" destination="HBo-Te-FKr" id="j0k-uf-lvJ"/>
+                        <outlet property="loadingIndicator" destination="kCY-4d-JZV" id="kYj-Me-XQ0"/>
                         <outlet property="titleLabel" destination="yPh-dZ-ozG" id="cs5-Lb-Vvt"/>
                     </connections>
                 </viewController>
@@ -61,7 +75,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.23137254901960785" green="0.13725490196078433" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="1T7-Yp-wiD">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="132"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,7 +104,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.031372549019607843" green="0.090196078431372548" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

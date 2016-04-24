@@ -13,7 +13,7 @@ class BarView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        gradient.colors = [UIColor.whiteColor().CGColor, UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0).CGColor]
+        gradient.colors = [UIColor.whiteColor().CGColor, UIColor(red: 0.56470588, green: 0.83137255, blue: 0.58431373, alpha: 1.0).CGColor]
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         gradient.frame = frame

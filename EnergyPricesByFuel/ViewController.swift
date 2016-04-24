@@ -15,6 +15,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
 
     @IBOutlet weak var graph: GraphView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     let networkHelper = NetworkHelper()
     
@@ -31,7 +32,9 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
         graph.delegate = self
         titleLabel.font = UIFont(name: "AvenirNext-DemiBold", size: 20)
-        titleLabel.textColor = UIColor(red: 0.62352941, green: 0.96470588, blue: 0.25098039, alpha: 1.0)
+        titleLabel.textColor = UIColor(red: 0.56470588, green: 0.83137255, blue: 0.58431373, alpha: 1.0)
+        
+        loadingIndicator.startAnimating()
         
     }
     
@@ -64,6 +67,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         
         dispatch_async(dispatch_get_main_queue(), {
             self.graph.reloadData()
+            self.loadingIndicator.stopAnimating()
         })
     }
     
