@@ -9,10 +9,27 @@
 import UIKit
 import CoreLocation
 
+var locations = [[String:String]]()
+
 class LocationPickerViewController: UITableViewController, CLLocationManagerDelegate {
     let defaults = NSUserDefaults.standardUserDefaults()
     let locationManager = CLLocationManager()
-    var locations = [[String:String]]()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        locationManager.delegate = self
+        
+        // load the states as an array of dicts from the plist "states"
+        let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")
+        if let path = plistPath, let states = NSArray(contentsOfFile: path) {
+            let s = states as! [NSDictionary]
+            for state in s {
+                locations.append(state as! [String: String])
+            }
+            // print(locations[1]["fullname"])
+        }
+    }
     
     @IBAction func getCurrentLocation(sender: UIButton) {
         // request permission for user location acess the first time
@@ -28,36 +45,19 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
                 print(error)
                 return
             }
-            
-            for placemark in results! {
-               print("\(placemark) \n\n ------------")
-            }
+//            
+//            for placemark in results! {
+//               print("\(placemark) \n\n ------------")
+//            }
             
             if results?.count > 0 {
                 let place = results![0]
                 let code = place.administrativeArea
                 self.defaults.setValue(code, forKey: "userlocation")
                 print("We found you at \(place.thoroughfare) \(code)")
-                // self.locationManager.stopUpdatingLocation()
+                self.locationManager.stopUpdatingLocation()
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
-        }
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        locationManager.delegate = self
-
-        // load the states as an array of dicts from the plist "states"
-        let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")
-        if let path = plistPath, let states = NSArray(contentsOfFile: path) {
-            let s = states as! [NSDictionary]
-            for state in s {
-                locations.append(state as! [String: String])
-            }
-            // print(locations[1]["fullname"])
         }
     }
 

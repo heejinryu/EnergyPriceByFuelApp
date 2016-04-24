@@ -39,9 +39,14 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         super.viewDidAppear(animated)
         // check if a location is saved to userdefaults
         if let location = defaults.stringForKey("userlocation") {
-            // add DC case handling here
-            networkHelper.loadGasPriceForState(location)
+            // check location, if not in the locations dictionary then load generic gas price
+            if locations.contains({ $0.values.contains(location) }) {
+                networkHelper.loadGasPriceForState(location)
+            } else {
+                networkHelper.loadGasPrice()
+            }
             userLocation = location
+            
         } else {
             performSegueWithIdentifier("showLocationPicker", sender: self)
         }
