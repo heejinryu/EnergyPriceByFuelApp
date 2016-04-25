@@ -25,7 +25,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         networkHelper.loadOilPrice()
         networkHelper.delegate = self
 
