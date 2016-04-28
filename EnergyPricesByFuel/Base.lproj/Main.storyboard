@@ -19,29 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-Te-FKr" customClass="GraphView" customModule="EnergyPricesByFuel">
-                                <rect key="frame" x="70" y="164" width="510" height="386"/>
+                                <rect key="frame" x="28" y="144" width="552" height="406"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Costs of Electricity Generation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-dZ-ozG">
-                                <rect key="frame" x="180" y="99" width="233" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costs of Electricity Generation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-dZ-ozG">
+                                <rect key="frame" x="184" y="84" width="233" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kCY-4d-JZV" userLabel="Loading Indicator">
-                                <rect key="frame" x="290" y="121" width="20" height="20"/>
+                                <rect key="frame" x="290" y="106" width="20" height="20"/>
                                 <color key="color" red="0.56470588235294117" green="0.83137254901960778" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="HBo-Te-FKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="9LX-PP-13t"/>
-                            <constraint firstItem="yPh-dZ-ozG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="D5b-ud-gqh"/>
+                            <constraint firstItem="HBo-Te-FKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9LX-PP-13t"/>
+                            <constraint firstItem="yPh-dZ-ozG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="D5b-ud-gqh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HBo-Te-FKr" secondAttribute="bottom" constant="50" id="Kj9-BB-VG5"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QBS-9g-nAQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HBo-Te-FKr" secondAttribute="trailing" id="YYn-AV-F5e"/>
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c61-XO-xua"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQE-jZ-dBB"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="top" secondItem="yPh-dZ-ozG" secondAttribute="bottom" constant="1" id="iqq-Y2-bZY"/>
-                            <constraint firstItem="HBo-Te-FKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="xBV-1p-aec"/>
+                            <constraint firstItem="HBo-Te-FKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="xBV-1p-aec"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

@@ -100,4 +100,9 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         return fuelForIndex.getLabel()
     }
     
+    func getIconNameForGraphView(graphView: GraphView, atIndex index: Int) -> String {
+        let IconForIndex = fuel[index]
+        return IconForIndex.fuelType
+    }
+    
 }

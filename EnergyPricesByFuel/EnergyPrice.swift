@@ -52,7 +52,7 @@ let mcfToMwh = Float(1/3.41214)
 // Conventional Combustion Turbine
 var oil = Fuel(fuelType: "Oil", levelizedCapitalCost: 41, fixedCost: 3, variableCostWithFuel: 45, transmissionInvestment: 4)
 // 1 boe = 1.6282 Mwh
-let bblToMwh = Float(1.6282)
+let bcs6blToMwh = Float(1.6282)
 
 // Advanced Nuclear
 var nuclear = Fuel(fuelType: "Nuclear", levelizedCapitalCost: 70, fixedCost: 12, variableCostWithFuel: 12, transmissionInvestment: 1)

@@ -16,6 +16,7 @@ protocol GraphDelegate {
     func valueForBarAtIndexForGraphView(graphView: GraphView, index: Int) -> CGFloat
     func spacingInBetweenBars(graphView: GraphView) -> CGFloat
     func getLabelForGraphView(graphView: GraphView, atIndex index: Int) -> String
+    func getIconNameForGraphView(graphView: GraphView, atIndex index: Int) -> String
 }
 
 class GraphView: UIView {
@@ -25,6 +26,7 @@ class GraphView: UIView {
     private var bars = [UIView]()
     private var widthConstraints = [NSLayoutConstraint]()
     private var numberOfBars = 0
+    private var iconSpace = CGFloat(40)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -64,11 +66,12 @@ class GraphView: UIView {
         
         var previousBar: UIView?
         for i in 0 ..< numberOfBars {
+            
             // Generate a new bar
             let bar = BarView()
-            
             addSubview(bar)
             
+            // add a label
             let label = UILabel(frame: CGRectMake(0, barHeight - 8, 250, 50))
             label.textAlignment = NSTextAlignment.Left
             label.text = delegate!.getLabelForGraphView(self, atIndex: i)
@@ -76,9 +79,16 @@ class GraphView: UIView {
             label.textColor = UIColor.whiteColor()
             bar.addSubview(label)
             
-            // Set constraints
+            // add a icon
+            let iconName = delegate!.getIconNameForGraphView(self, atIndex: i)
+            let imageView = UIImageView(frame: CGRectMake(-iconSpace-5, 15, iconSpace - 10, barHeight - 10))
+            imageView.contentMode = .ScaleAspectFill
+            imageView.image = UIImage(named: iconName)
+            bar.addSubview(imageView)
+            
+            // Set bar constraints
             bar.snp_makeConstraints(closure: { (make) in
-                make.left.equalTo(0)
+                make.left.equalTo(self).offset(iconSpace)
                 make.height.equalTo(barHeight)
                 
                 if let previousBar = previousBar {
@@ -105,7 +115,7 @@ class GraphView: UIView {
     private func showRelativeBars() {
         var delay = 0.0
         
-        let drawWidth = self.frame.width
+        let drawWidth = self.frame.width - iconSpace
         var maxValue = CGFloat(0)
         
         // Determine what the maxValue in the graph is
@@ -156,7 +166,7 @@ class GraphView: UIView {
         }
     }
 
-    private func removeSubViews() {
+    func removeSubViews() {
         for view in bars {
             view.removeFromSuperview()
         }
