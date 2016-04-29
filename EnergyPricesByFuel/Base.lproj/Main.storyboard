@@ -49,18 +49,12 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="8zt-Do-9Cr">
-                        <barButtonItem key="rightBarButtonItem" title="Location" id="uMj-Uc-esS">
-                            <color key="tintColor" red="0.090196078431372548" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="JIN-ns-cWX" kind="presentation" identifier="showLocationPicker" id="6RI-B5-Lmv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8zt-Do-9Cr"/>
                     <connections>
                         <outlet property="graph" destination="HBo-Te-FKr" id="j0k-uf-lvJ"/>
                         <outlet property="loadingIndicator" destination="kCY-4d-JZV" id="kYj-Me-XQ0"/>
                         <outlet property="titleLabel" destination="yPh-dZ-ozG" id="cs5-Lb-Vvt"/>
+                        <segue destination="JIN-ns-cWX" kind="presentation" identifier="showLocationPicker" id="wjT-Gx-oLV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

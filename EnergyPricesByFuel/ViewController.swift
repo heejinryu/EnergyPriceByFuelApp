@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import pop
 import Foundation
+import Social
 
 class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
 
@@ -28,14 +29,44 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
       
         networkHelper.loadOilPrice()
         networkHelper.delegate = self
-
+        
+        // load background and title
         view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
         graph.delegate = self
         titleLabel.font = UIFont(name: "AvenirNext-DemiBold", size: 20)
         titleLabel.textColor = UIColor(red: 0.56470588, green: 0.83137255, blue: 0.58431373, alpha: 1.0)
         
+        // load location button
+        let locationButton = UIButton()
+        locationButton.setImage(UIImage(named: "Location"), forState: UIControlState.Normal)
+        locationButton.addTarget(self, action: "setLocation", forControlEvents: UIControlEvents.TouchUpInside)
+        locationButton.frame = CGRectMake(0, 0, 22, 31)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: locationButton)
+        
+        // Load tweet button
+        let tweetButton = UIButton()
+        tweetButton.setImage(UIImage(named: "Tweet"), forState: UIControlState.Normal)
+        tweetButton.addTarget(self, action: "tweetNow", forControlEvents: UIControlEvents.TouchUpInside)
+        tweetButton.frame = CGRectMake(0, 0, 35, 25)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: tweetButton)
+        
         loadingIndicator.startAnimating()
         
+    }
+    
+    func setLocation() {
+        performSegueWithIdentifier("showLocationPicker", sender: self)
+    }
+    
+    func tweetNow() {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            self.presentViewController(tweetShare, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -77,12 +108,10 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         return fuel.count
     }
     
-    
     func maximumValueForGraphView(graphView: GraphView) -> CGFloat? {
         let costs = fuel.map { fuel in
             return fuel.totalCost()
         }
-        
         return CGFloat(costs.maxElement()!)
     }
     
