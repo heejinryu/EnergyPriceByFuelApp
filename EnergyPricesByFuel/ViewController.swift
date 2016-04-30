@@ -63,6 +63,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
             let tweetShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             let text = "Current costs of electricity generation in \(userLocation) via coolApp"
             tweetShare.setInitialText(text)
+            tweetShare.addImage(screenShotMethod())
             // add screen shot
             self.presentViewController(tweetShare, animated: true, completion: nil)
         } else {
@@ -70,6 +71,15 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    func screenShotMethod() -> UIImage {
+        //Create the UIImage from a screenshot
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
     
     override func viewDidAppear(animated: Bool) {
