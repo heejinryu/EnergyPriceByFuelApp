@@ -145,7 +145,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "HEEJIN RYU";
+				ORGANIZATIONNAME = "MEI TAO";
 				TargetAttributes = {
 					897DB46D1CC2B8EB0060FBC4 = {
 						CreatedOnToolsVersion = 7.3;

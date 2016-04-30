@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-Te-FKr" customClass="GraphView" customModule="EnergyPricesByFuel">
-                                <rect key="frame" x="28" y="144" width="552" height="406"/>
+                                <rect key="frame" x="28" y="134" width="552" height="416"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costs of Electricity Generation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-dZ-ozG">
                                 <rect key="frame" x="184" y="84" width="233" height="21"/>
@@ -41,7 +41,7 @@
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c61-XO-xua"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQE-jZ-dBB"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="top" secondItem="yPh-dZ-ozG" secondAttribute="bottom" constant="1" id="iqq-Y2-bZY"/>
-                            <constraint firstItem="HBo-Te-FKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="xBV-1p-aec"/>
+                            <constraint firstItem="HBo-Te-FKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="xBV-1p-aec"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

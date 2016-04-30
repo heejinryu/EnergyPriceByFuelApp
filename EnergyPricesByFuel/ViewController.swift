@@ -60,7 +60,10 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     
     func tweetNow() {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-            let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let tweetShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let text = "Current costs of electricity generation in \(userLocation) via coolApp"
+            tweetShare.setInitialText(text)
+            // add screen shot
             self.presentViewController(tweetShare, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
