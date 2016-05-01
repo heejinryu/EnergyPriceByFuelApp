@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
-               BuildableName = "EnergyPricesByFuel.app"
-               BlueprintName = "EnergyPricesByFuel"
-               ReferencedContainer = "container:Vista.xcodeproj">
+               BuildableName = "Vista.app"
+               BlueprintName = "Vista"
+               ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
-            BuildableName = "EnergyPricesByFuel.app"
-            BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:Vista.xcodeproj">
+            BuildableName = "Vista.app"
+            BlueprintName = "Vista"
+            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
-            BuildableName = "EnergyPricesByFuel.app"
-            BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:Vista.xcodeproj">
+            BuildableName = "Vista.app"
+            BlueprintName = "Vista"
+            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
-            BuildableName = "EnergyPricesByFuel.app"
-            BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:Vista.xcodeproj">
+            BuildableName = "Vista.app"
+            BlueprintName = "Vista"
+            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

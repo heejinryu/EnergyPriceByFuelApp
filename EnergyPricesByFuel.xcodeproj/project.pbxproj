@@ -27,7 +27,7 @@
 		395F5C811CCBC43E00801D61 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		395F5C831CCBCF7600801D61 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		54B08AA648E0FD84152A51AD /* Pods-EnergyPricesByFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnergyPricesByFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnergyPricesByFuel/Pods-EnergyPricesByFuel.debug.xcconfig"; sourceTree = "<group>"; };
-		897DB46E1CC2B8EB0060FBC4 /* EnergyPricesByFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyPricesByFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		897DB46E1CC2B8EB0060FBC4 /* Vista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897DB4711CC2B8EB0060FBC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		897DB4731CC2B8EB0060FBC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		897DB4761CC2B8EB0060FBC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		897DB4651CC2B8EB0060FBC4 = {
 			isa = PBXGroup;
 			children = (
-				897DB4701CC2B8EB0060FBC4 /* Vista */,
+				897DB4701CC2B8EB0060FBC4 /* EnergyPricesByFuel */,
 				897DB46F1CC2B8EB0060FBC4 /* Products */,
 				5DAD9005DEB4AA7F63537BCC /* Pods */,
 				2E623B1D43C6A690B63ADF7D /* Frameworks */,
@@ -82,12 +82,12 @@
 		897DB46F1CC2B8EB0060FBC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				897DB46E1CC2B8EB0060FBC4 /* EnergyPricesByFuel.app */,
+				897DB46E1CC2B8EB0060FBC4 /* Vista.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		897DB4701CC2B8EB0060FBC4 /* Vista */ = {
+		897DB4701CC2B8EB0060FBC4 /* EnergyPricesByFuel */ = {
 			isa = PBXGroup;
 			children = (
 				897DB4731CC2B8EB0060FBC4 /* ViewController.swift */,
@@ -100,7 +100,6 @@
 				395F5C831CCBCF7600801D61 /* BarView.swift */,
 				897DB4831CC2B9070060FBC4 /* Supporting Files */,
 			);
-			name = Vista;
 			path = EnergyPricesByFuel;
 			sourceTree = "<group>";
 		};
@@ -118,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		897DB46D1CC2B8EB0060FBC4 /* EnergyPricesByFuel */ = {
+		897DB46D1CC2B8EB0060FBC4 /* Vista */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 897DB4801CC2B8EB0060FBC4 /* Build configuration list for PBXNativeTarget "EnergyPricesByFuel" */;
+			buildConfigurationList = 897DB4801CC2B8EB0060FBC4 /* Build configuration list for PBXNativeTarget "Vista" */;
 			buildPhases = (
 				A86140CD1E896B5369445F8F /* Check Pods Manifest.lock */,
 				897DB46A1CC2B8EB0060FBC4 /* Sources */,
@@ -133,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = EnergyPricesByFuel;
+			name = Vista;
 			productName = EnergyPricesByFuel;
-			productReference = 897DB46E1CC2B8EB0060FBC4 /* EnergyPricesByFuel.app */;
+			productReference = 897DB46E1CC2B8EB0060FBC4 /* Vista.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "Vista" */;
+			buildConfigurationList = 897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "EnergyPricesByFuel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -166,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				897DB46D1CC2B8EB0060FBC4 /* EnergyPricesByFuel */,
+				897DB46D1CC2B8EB0060FBC4 /* Vista */,
 			);
 		};
 /* End PBXProject section */
@@ -363,8 +362,8 @@
 				INFOPLIST_FILE = EnergyPricesByFuel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heejinryu.EnergyPricesByFuel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vista;
+				PRODUCT_NAME = Vista;
 			};
 			name = Debug;
 		};
@@ -376,15 +375,15 @@
 				INFOPLIST_FILE = EnergyPricesByFuel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heejinryu.EnergyPricesByFuel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vista;
+				PRODUCT_NAME = Vista;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "Vista" */ = {
+		897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "EnergyPricesByFuel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				897DB47E1CC2B8EB0060FBC4 /* Debug */,
@@ -393,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		897DB4801CC2B8EB0060FBC4 /* Build configuration list for PBXNativeTarget "EnergyPricesByFuel" */ = {
+		897DB4801CC2B8EB0060FBC4 /* Build configuration list for PBXNativeTarget "Vista" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				897DB4811CC2B8EB0060FBC4 /* Debug */,
