@@ -59,6 +59,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     }
     
     func tweetNow() {
+        // share the graph in a tweet and populate default tweet text
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let tweetShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             let text = "Current costs of electricity generation in \(userLocation) via coolApp"
@@ -74,7 +75,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     }
     
     func screenShotMethod() -> UIImage {
-        //Create the UIImage from a screenshot
+        //Create a UIImage from a screenshot
         UIGraphicsBeginImageContext(view.frame.size)
         view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
