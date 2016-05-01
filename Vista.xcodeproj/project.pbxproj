@@ -72,7 +72,7 @@
 		897DB4651CC2B8EB0060FBC4 = {
 			isa = PBXGroup;
 			children = (
-				897DB4701CC2B8EB0060FBC4 /* EnergyPricesByFuel */,
+				897DB4701CC2B8EB0060FBC4 /* Vista */,
 				897DB46F1CC2B8EB0060FBC4 /* Products */,
 				5DAD9005DEB4AA7F63537BCC /* Pods */,
 				2E623B1D43C6A690B63ADF7D /* Frameworks */,
@@ -87,7 +87,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		897DB4701CC2B8EB0060FBC4 /* EnergyPricesByFuel */ = {
+		897DB4701CC2B8EB0060FBC4 /* Vista */ = {
 			isa = PBXGroup;
 			children = (
 				897DB4731CC2B8EB0060FBC4 /* ViewController.swift */,
@@ -100,6 +100,7 @@
 				395F5C831CCBCF7600801D61 /* BarView.swift */,
 				897DB4831CC2B9070060FBC4 /* Supporting Files */,
 			);
+			name = Vista;
 			path = EnergyPricesByFuel;
 			sourceTree = "<group>";
 		};
@@ -152,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "EnergyPricesByFuel" */;
+			buildConfigurationList = 897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "Vista" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -383,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "EnergyPricesByFuel" */ = {
+		897DB4691CC2B8EB0060FBC4 /* Build configuration list for PBXProject "Vista" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				897DB47E1CC2B8EB0060FBC4 /* Debug */,
