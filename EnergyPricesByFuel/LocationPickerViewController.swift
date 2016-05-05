@@ -27,13 +27,10 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
             for state in s {
                 locations.append(state as! [String: String])
             }
-            // print(locations[1]["fullname"])
         }
     }
     
     @IBAction func getCurrentLocation(sender: UIButton) {
-        solar = solarDefault
-        
         // request permission for user location acess the first time
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters

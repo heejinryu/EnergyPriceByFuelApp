@@ -121,20 +121,22 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     }
     
     func updateSolar() {
+        // update solar cost for given location if location is a U.S. state
         if locations.contains({ $0.values.contains(userLocation) }) {
             solar.levelizedCapitalCost = 60 // change to dynamic
-            solar.transmissionInvestment = 0
-            solar.variableCostWithFuel = 0
             solar.fixedOMCost = 0
+            solar.variableCostWithFuel = 0
+            solar.transmissionInvestment = 0
             
+            // replace the solar variable
             fuel.removeAtIndex(1)
             fuel.insert(solar, atIndex: 1)
         } else {
-            solar.levelizedCapitalCost = 60 
-            solar.transmissionInvestment = 0
+            // set solar costs back to default if location is out of range
+            solar.levelizedCapitalCost = 110
+            solar.fixedOMCost = 11
             solar.variableCostWithFuel = 0
-            solar.fixedOMCost = 0
-            print("solar default")
+            solar.transmissionInvestment = 4
         }
     }
     
