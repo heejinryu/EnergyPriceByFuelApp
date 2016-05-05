@@ -29,6 +29,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
       
         networkHelper.loadOilPrice()
         networkHelper.delegate = self
+        // load solar price
         
         // load background and title
         view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
@@ -110,12 +111,32 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         fuel.removeAtIndex(4)
         fuel.insert(gas, atIndex: 4)
         
+        // Replace Solar - TO DO
+        updateSolar()
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.graph.reloadData()
             self.loadingIndicator.stopAnimating()
         })
     }
     
+    func updateSolar() {
+        if locations.contains({ $0.values.contains(userLocation) }) {
+            solar.levelizedCapitalCost = 60 // change to dynamic
+            solar.transmissionInvestment = 0
+            solar.variableCostWithFuel = 0
+            solar.fixedOMCost = 0
+            
+            fuel.removeAtIndex(1)
+            fuel.insert(solar, atIndex: 1)
+        } else {
+            solar.levelizedCapitalCost = 60 
+            solar.transmissionInvestment = 0
+            solar.variableCostWithFuel = 0
+            solar.fixedOMCost = 0
+            print("solar default")
+        }
+    }
     
     // MARK: GraphView Delegate
     func numberOfBarsInGraphView(graphView: GraphView) -> Int {

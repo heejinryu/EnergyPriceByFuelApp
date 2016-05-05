@@ -32,6 +32,8 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     }
     
     @IBAction func getCurrentLocation(sender: UIButton) {
+        solar = solarDefault
+        
         // request permission for user location acess the first time
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -77,6 +79,7 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     // save selected location to UseDefaults backend
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         defaults.setValue(locations[indexPath.row]["code"], forKey: "userlocation")
+        // update solar cost with chosen location code
         dismissViewControllerAnimated(true, completion: nil)
     }
 
