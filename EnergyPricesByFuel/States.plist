@@ -7,408 +7,306 @@
 		<string>Alabama</string>
 		<key>code</key>
 		<string>AL</string>
-		<key>solarcost</key>
-		<real>141.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Alaska</string>
 		<key>code</key>
 		<string>AK</string>
-		<key>solarcost</key>
-		<real>120.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Arizona</string>
 		<key>code</key>
 		<string>AZ</string>
-		<key>solarcost</key>
-		<real>101.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Arkansas</string>
 		<key>code</key>
 		<string>AR</string>
-		<key>solarcost</key>
-		<real>112.3</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>California</string>
 		<key>code</key>
 		<string>CA</string>
-		<key>solarcost</key>
-		<real>128.6</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Colorado</string>
 		<key>code</key>
 		<string>CO</string>
-		<key>solarcost</key>
-		<real>108.2</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Connecticut</string>
 		<key>code</key>
 		<string>CT</string>
-		<key>solarcost</key>
-		<real>110.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Delaware</string>
 		<key>code</key>
 		<string>DE</string>
-		<key>solarcost</key>
-		<real>129.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>District of Columbia</string>
 		<key>code</key>
 		<string>DC</string>
-		<key>solarcost</key>
-		<real>122.6</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Florida</string>
 		<key>code</key>
 		<string>FL</string>
-		<key>solarcost</key>
-		<real>135.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Georgia</string>
 		<key>code</key>
 		<string>GA</string>
-		<key>solarcost</key>
-		<integer>109</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Hawaii</string>
 		<key>code</key>
 		<string>HI</string>
-		<key>solarcost</key>
-		<real>121.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Idaho</string>
 		<key>code</key>
 		<string>ID</string>
-		<key>solarcost</key>
-		<real>150.8</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Illinois</string>
 		<key>code</key>
 		<string>IL</string>
-		<key>solarcost</key>
-		<real>114.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Indiana</string>
 		<key>code</key>
 		<string>IN</string>
-		<key>solarcost</key>
-		<real>106.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Iowa</string>
 		<key>code</key>
 		<string>IA</string>
-		<key>solarcost</key>
-		<real>78.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Kansas</string>
 		<key>code</key>
 		<string>KS</string>
-		<key>solarcost</key>
-		<integer>146</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Kentucky</string>
 		<key>code</key>
 		<string>KY</string>
-		<key>solarcost</key>
-		<real>91.8</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Louisiana</string>
 		<key>code</key>
 		<string>LA</string>
-		<key>solarcost</key>
-		<real>155.1</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Maine</string>
 		<key>code</key>
 		<string>ME</string>
-		<key>solarcost</key>
-		<real>77.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Maryland</string>
 		<key>code</key>
 		<string>MD</string>
-		<key>solarcost</key>
-		<integer>122</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Massachusetts</string>
 		<key>code</key>
 		<string>MA</string>
-		<key>solarcost</key>
-		<real>102.8</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Michigan</string>
 		<key>code</key>
 		<string>MI</string>
-		<key>solarcost</key>
-		<real>141.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Minnesota</string>
 		<key>code</key>
 		<string>MN</string>
-		<key>solarcost</key>
-		<real>158.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Mississippi</string>
 		<key>code</key>
 		<string>MS</string>
-		<key>solarcost</key>
-		<real>96.59999999999999</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Missouri</string>
 		<key>code</key>
 		<string>MO</string>
-		<key>solarcost</key>
-		<real>90.09999999999999</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Montana</string>
 		<key>code</key>
 		<string>MT</string>
-		<key>solarcost</key>
-		<real>161.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Nebraska</string>
 		<key>code</key>
 		<string>NE</string>
-		<key>solarcost</key>
-		<real>133.6</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Nevada</string>
 		<key>code</key>
 		<string>NV</string>
-		<key>solarcost</key>
-		<integer>109</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>New Hampshire</string>
 		<key>code</key>
 		<string>NH</string>
-		<key>solarcost</key>
-		<real>91.59999999999999</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>New Jersey</string>
 		<key>code</key>
 		<string>NJ</string>
-		<key>solarcost</key>
-		<real>152.1</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>New Mexico</string>
 		<key>code</key>
 		<string>NM</string>
-		<key>solarcost</key>
-		<integer>109</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>New York</string>
 		<key>code</key>
 		<string>NY</string>
-		<key>solarcost</key>
-		<real>113.3</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>North Carolina</string>
 		<key>code</key>
 		<string>NC</string>
-		<key>solarcost</key>
-		<real>129.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>North Dakota</string>
 		<key>code</key>
 		<string>ND</string>
-		<key>solarcost</key>
-		<real>87.8</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Ohio</string>
 		<key>code</key>
 		<string>OH</string>
-		<key>solarcost</key>
-		<real>135.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Oklahoma</string>
 		<key>code</key>
 		<string>OK</string>
-		<key>solarcost</key>
-		<real>148.2</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Oregon</string>
 		<key>code</key>
 		<string>OR</string>
-		<key>solarcost</key>
-		<real>101.7</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Pennsylvania</string>
 		<key>code</key>
 		<string>PA</string>
-		<key>solarcost</key>
-		<real>120.4</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Rhode Island</string>
 		<key>code</key>
 		<string>RI</string>
-		<key>solarcost</key>
-		<real>84.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>South Carolina</string>
 		<key>code</key>
 		<string>SC</string>
-		<key>solarcost</key>
-		<real>173.2</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>South Dakota</string>
 		<key>code</key>
 		<string>SD</string>
-		<key>solarcost</key>
-		<real>110.3</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Tennessee</string>
 		<key>code</key>
 		<string>TN</string>
-		<key>solarcost</key>
-		<real>152.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Texas</string>
 		<key>code</key>
 		<string>TX</string>
-		<key>solarcost</key>
-		<real>100.4</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Utah</string>
 		<key>code</key>
 		<string>UT</string>
-		<key>solarcost</key>
-		<real>106.9</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Vermont</string>
 		<key>code</key>
 		<string>VT</string>
-		<key>solarcost</key>
-		<integer>109</integer>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Virginia</string>
 		<key>code</key>
 		<string>VA</string>
-		<key>solarcost</key>
-		<real>138.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Washington</string>
 		<key>code</key>
 		<string>WA</string>
-		<key>solarcost</key>
-		<real>152.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>West Virginia</string>
 		<key>code</key>
 		<string>WV</string>
-		<key>solarcost</key>
-		<real>128.2</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Wisconsin</string>
 		<key>code</key>
 		<string>WI</string>
-		<key>solarcost</key>
-		<real>141.5</real>
 	</dict>
 	<dict>
 		<key>fullname</key>
 		<string>Wyoming</string>
 		<key>code</key>
 		<string>WY</string>
-		<key>solarcost</key>
-		<real>155.3</real>
 	</dict>
 </array>
 </plist>

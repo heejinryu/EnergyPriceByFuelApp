@@ -23,6 +23,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     let defaults = NSUserDefaults.standardUserDefaults()
     var fuel = [wind, solar, hydro, coal, gas, oil, nuclear, biomass]
     var userLocation = ""
+    var solarCosts = [String: Float]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,7 +124,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     func updateSolar() {
         // update solar cost for given location if location is a U.S. state
         if locations.contains({ $0.values.contains(userLocation) }) {
-            solar.levelizedCapitalCost = 60 // change to dynamic
+            solar.levelizedCapitalCost = getSolarCost()!
             solar.fixedOMCost = 0
             solar.variableCostWithFuel = 0
             solar.transmissionInvestment = 0
@@ -138,6 +139,14 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
             solar.variableCostWithFuel = 0
             solar.transmissionInvestment = 4
         }
+    }
+    
+    func getSolarCost() -> Float? {
+        let plistPath = NSBundle.mainBundle().pathForResource("Solar", ofType: "plist")
+        if let path = plistPath, let costs = NSDictionary(contentsOfFile: path) as? [String: Float] {
+                solarCosts = costs
+        }
+        return solarCosts[userLocation]!
     }
     
     // MARK: GraphView Delegate
