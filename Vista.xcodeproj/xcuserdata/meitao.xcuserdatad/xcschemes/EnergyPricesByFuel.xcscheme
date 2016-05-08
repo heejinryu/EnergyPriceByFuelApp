@@ -17,7 +17,7 @@
                BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
                BuildableName = "EnergyPricesByFuel.app"
                BlueprintName = "EnergyPricesByFuel"
-               ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
+               ReferencedContainer = "container:Vista.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
             BuildableName = "EnergyPricesByFuel.app"
             BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
+            ReferencedContainer = "container:Vista.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
             BuildableName = "EnergyPricesByFuel.app"
             BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
+            ReferencedContainer = "container:Vista.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "897DB46D1CC2B8EB0060FBC4"
             BuildableName = "EnergyPricesByFuel.app"
             BlueprintName = "EnergyPricesByFuel"
-            ReferencedContainer = "container:EnergyPricesByFuel.xcodeproj">
+            ReferencedContainer = "container:Vista.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
