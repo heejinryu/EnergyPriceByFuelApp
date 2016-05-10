@@ -24,10 +24,18 @@
                                     <constraint firstAttribute="width" constant="200" id="k3X-8F-jnn"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vista 1.0 by Mei Tao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-Xg-ehK">
+                                <rect key="frame" x="216" y="380" width="168" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oG0-1v-5Bn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IdJ-cg-hhW"/>
+                            <constraint firstItem="Zzc-Xg-ehK" firstAttribute="top" secondItem="oG0-1v-5Bn" secondAttribute="bottom" constant="10" id="Q6j-5E-0xp"/>
+                            <constraint firstItem="Zzc-Xg-ehK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sg1-tr-vQD"/>
                             <constraint firstItem="oG0-1v-5Bn" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="150" id="blD-DU-WiH"/>
                             <constraint firstItem="oG0-1v-5Bn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hmZ-dB-887"/>
                         </constraints>

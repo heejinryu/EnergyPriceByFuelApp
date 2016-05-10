@@ -31,11 +31,17 @@
                                 <rect key="frame" x="290" y="106" width="20" height="20"/>
                                 <color key="color" red="0.56470588235294117" green="0.83137254901960778" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-fg-SUC">
+                                <rect key="frame" x="565" y="565" width="25" height="25"/>
+                                <state key="normal" image="info"/>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="HBo-Te-FKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9LX-PP-13t"/>
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="D5b-ud-gqh"/>
+                            <constraint firstAttribute="trailing" secondItem="eyj-fg-SUC" secondAttribute="trailing" constant="10" id="JbM-Ql-tFX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HBo-Te-FKr" secondAttribute="bottom" constant="50" id="Kj9-BB-VG5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eyj-fg-SUC" secondAttribute="bottom" constant="10" id="Nqz-1u-xBw"/>
                             <constraint firstItem="kCY-4d-JZV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QBS-9g-nAQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HBo-Te-FKr" secondAttribute="trailing" id="YYn-AV-F5e"/>
                             <constraint firstItem="yPh-dZ-ozG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c61-XO-xua"/>
@@ -131,4 +137,7 @@
             <point key="canvasLocation" x="289" y="-401"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="25" height="25"/>
+    </resources>
 </document>
