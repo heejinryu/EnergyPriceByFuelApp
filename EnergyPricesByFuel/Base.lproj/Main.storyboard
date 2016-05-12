@@ -34,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-fg-SUC">
                                 <rect key="frame" x="565" y="565" width="25" height="25"/>
                                 <state key="normal" image="info"/>
+                                <connections>
+                                    <segue destination="4qA-3M-QPW" kind="replace" splitViewControllerTargetIndex="1" id="aB1-KK-SVJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -67,6 +70,25 @@
             </objects>
             <point key="canvasLocation" x="293" y="390"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="D4U-LW-I1C">
+            <objects>
+                <viewController id="4qA-3M-QPW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zAq-cM-6oj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9eI-iS-mf6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNd-kg-PlN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uVm-LP-faD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeA-EZ-eIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="1140"/>
+        </scene>
         <!--Location Picker View Controller-->
         <scene sceneID="zxF-Rw-65A">
             <objects>
@@ -81,8 +103,8 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-0p-UL3">
-                                    <rect key="frame" x="214" y="50" width="173" height="32"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <rect key="frame" x="209" y="50" width="183" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Use my current location">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -90,9 +112,20 @@
                                         <action selector="getCurrentLocation:" destination="JIN-ns-cWX" eventType="touchUpInside" id="RDy-3O-YXW"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-D0-2rB" userLabel="Close">
+                                    <rect key="frame" x="573" y="20" width="17" height="21"/>
+                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" image="cross"/>
+                                    <connections>
+                                        <action selector="closeVC:" destination="JIN-ns-cWX" eventType="touchUpInside" id="ZBp-dp-d0D"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Jjb-D0-2rB" secondAttribute="trailing" constant="10" id="FQP-3e-IbP"/>
+                                <constraint firstItem="Jjb-D0-2rB" firstAttribute="top" secondItem="1T7-Yp-wiD" secondAttribute="top" constant="20" id="NAb-rm-SFO"/>
                                 <constraint firstItem="yQF-0p-UL3" firstAttribute="centerX" secondItem="1T7-Yp-wiD" secondAttribute="centerX" id="OPU-3s-0k6"/>
                                 <constraint firstItem="yQF-0p-UL3" firstAttribute="centerY" secondItem="1T7-Yp-wiD" secondAttribute="centerY" id="oMi-EV-8nV"/>
                             </constraints>
@@ -113,6 +146,7 @@
                             <outlet property="delegate" destination="JIN-ns-cWX" id="1gA-IX-EXs"/>
                         </connections>
                     </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gb-xv-eK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +172,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross" width="17" height="15"/>
         <image name="info" width="25" height="25"/>
     </resources>
 </document>

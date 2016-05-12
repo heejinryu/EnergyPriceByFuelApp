@@ -37,6 +37,11 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
         locationManager.startUpdatingLocation()
     }
     
+    @IBAction func closeVC(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         
         CLGeocoder().reverseGeocodeLocation(newLocation) { (results, error) in
@@ -60,6 +65,7 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // print(locations.count)
         return locations.count
     }
 
@@ -76,7 +82,6 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
     // save selected location to UseDefaults backend
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         defaults.setValue(locations[indexPath.row]["code"], forKey: "userlocation")
-        // update solar cost with chosen location code
         dismissViewControllerAnimated(true, completion: nil)
     }
 
