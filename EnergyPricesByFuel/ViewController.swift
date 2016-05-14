@@ -64,7 +64,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         // share the graph in a tweet and populate default tweet text
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let tweetShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            let text = "Current costs of electricity generation in \(userLocation) via @Vista"
+            let text = "Costs of electricity generation in \(userLocation) via @Vista"
             tweetShare.setInitialText(text)
             tweetShare.addImage(screenShotMethod())
             // add screen shot

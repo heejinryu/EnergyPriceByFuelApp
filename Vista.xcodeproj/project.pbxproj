@@ -12,6 +12,7 @@
 		395F5C821CCBC43E00801D61 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F5C811CCBC43E00801D61 /* NetworkHelper.swift */; };
 		395F5C841CCBCF7600801D61 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395F5C831CCBCF7600801D61 /* BarView.swift */; };
 		395F5C861CDAF13A00801D61 /* Solar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 395F5C851CDAF13A00801D61 /* Solar.plist */; };
+		396DE0521CE6B18800A86D5D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396DE0511CE6B18800A86D5D /* InfoViewController.swift */; };
 		897DB4721CC2B8EB0060FBC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DB4711CC2B8EB0060FBC4 /* AppDelegate.swift */; };
 		897DB4741CC2B8EB0060FBC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DB4731CC2B8EB0060FBC4 /* ViewController.swift */; };
 		897DB4771CC2B8EB0060FBC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897DB4751CC2B8EB0060FBC4 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		395F5C811CCBC43E00801D61 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		395F5C831CCBCF7600801D61 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		395F5C851CDAF13A00801D61 /* Solar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Solar.plist; sourceTree = "<group>"; };
+		396DE0511CE6B18800A86D5D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		54B08AA648E0FD84152A51AD /* Pods-EnergyPricesByFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnergyPricesByFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnergyPricesByFuel/Pods-EnergyPricesByFuel.debug.xcconfig"; sourceTree = "<group>"; };
 		897DB46E1CC2B8EB0060FBC4 /* EnergyPricesByFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyPricesByFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897DB4711CC2B8EB0060FBC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				395F5C7D1CC84F1A00801D61 /* LocationPickerViewController.swift */,
 				89B6C30D1CC2D25B0053F7CC /* EnergyPrice.swift */,
 				395F5C811CCBC43E00801D61 /* NetworkHelper.swift */,
+				396DE0511CE6B18800A86D5D /* InfoViewController.swift */,
 				897DB4751CC2B8EB0060FBC4 /* Main.storyboard */,
 				395F5C7F1CC8522600801D61 /* States.plist */,
 				395F5C851CDAF13A00801D61 /* Solar.plist */,
@@ -248,6 +251,7 @@
 				897DB4721CC2B8EB0060FBC4 /* AppDelegate.swift in Sources */,
 				395F5C7E1CC84F1A00801D61 /* LocationPickerViewController.swift in Sources */,
 				395F5C821CCBC43E00801D61 /* NetworkHelper.swift in Sources */,
+				396DE0521CE6B18800A86D5D /* InfoViewController.swift in Sources */,
 				89DB528D1CC2BFBA008053AF /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
