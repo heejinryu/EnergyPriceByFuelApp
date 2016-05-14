@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzF-mb-nER">
-                                <rect key="frame" x="241" y="100" width="119" height="79"/>
+                                <rect key="frame" x="241" y="120" width="119" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Credits">
                                         <attributes>
@@ -103,26 +103,26 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwm-cp-waP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwm-cp-waP">
                                 <rect key="frame" x="226" y="189" width="149" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Created by Mei Tao">
                                         <attributes>
                                             <color key="NSColor" red="0.090196078431372548" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Avenir-Light"/>
+                                            <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-vo-FT7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-vo-FT7">
                                 <rect key="frame" x="183" y="238" width="234" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Commodity prices provided by">
                                         <attributes>
                                             <color key="NSColor" red="0.090196078431372548" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Avenir-Light"/>
+                                            <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -130,13 +130,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eia" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-V6-f5O">
-                                <rect key="frame" x="183" y="277" width="58" height="43"/>
+                                <rect key="frame" x="197" y="291" width="58" height="43"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoofiance" translatesAutoresizingMaskIntoConstraints="NO" id="Zh1-Te-rzu">
-                                <rect key="frame" x="271" y="287" width="172" height="40"/>
+                                <rect key="frame" x="285" y="301" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="9cW-2e-cfq"/>
+                                    <constraint firstAttribute="height" constant="30" id="te6-Th-3QA"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-By-5wm">
-                                <rect key="frame" x="75" y="496" width="450" height="54"/>
+                                <rect key="frame" x="30" y="514" width="540" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="Ks3-cy-6kH"/>
                                 </constraints>
@@ -165,12 +169,17 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ks3-cy-6kH"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.83137254900000002" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zh1-Te-rzu" firstAttribute="baseline" secondItem="YTN-V6-f5O" secondAttribute="baseline" id="4Zi-L8-ZbG"/>
-                            <constraint firstItem="EzF-mb-nER" firstAttribute="top" secondItem="zAq-cM-6oj" secondAttribute="bottom" constant="80" id="56E-Yi-0E5"/>
+                            <constraint firstItem="EzF-mb-nER" firstAttribute="top" secondItem="zAq-cM-6oj" secondAttribute="bottom" constant="100" id="56E-Yi-0E5"/>
                             <constraint firstItem="ovO-By-5wm" firstAttribute="centerX" secondItem="FNd-kg-PlN" secondAttribute="centerX" id="6gG-WD-xtR"/>
                             <constraint firstItem="Hip-vo-FT7" firstAttribute="leading" secondItem="FNd-kg-PlN" secondAttribute="leadingMargin" constant="82" id="BVs-CI-Lmr"/>
                             <constraint firstItem="YTN-V6-f5O" firstAttribute="top" secondItem="Hip-vo-FT7" secondAttribute="bottom" constant="15" id="Dpi-GR-Jbv"/>
@@ -178,12 +187,14 @@
                             <constraint firstItem="cwm-cp-waP" firstAttribute="leading" secondItem="EzF-mb-nER" secondAttribute="leading" id="F7B-ZO-WvO"/>
                             <constraint firstItem="ovO-By-5wm" firstAttribute="top" secondItem="Zh1-Te-rzu" secondAttribute="bottom" constant="33" id="IVj-88-qtZ"/>
                             <constraint firstItem="IYf-dx-Bmn" firstAttribute="top" secondItem="zAq-cM-6oj" secondAttribute="bottom" constant="20" id="KLf-fZ-9Ga"/>
+                            <constraint firstItem="ovO-By-5wm" firstAttribute="leading" secondItem="FNd-kg-PlN" secondAttribute="leadingMargin" constant="10" id="KbC-WH-CDb"/>
                             <constraint firstItem="Hip-vo-FT7" firstAttribute="top" secondItem="cwm-cp-waP" secondAttribute="bottom" constant="25" id="L0c-zy-agi"/>
                             <constraint firstItem="cwm-cp-waP" firstAttribute="centerX" secondItem="EzF-mb-nER" secondAttribute="centerX" id="SQe-8g-4pi"/>
                             <constraint firstItem="Zh1-Te-rzu" firstAttribute="leading" secondItem="YTN-V6-f5O" secondAttribute="trailing" constant="30" id="TDe-xX-RrC"/>
                             <constraint firstItem="YTN-V6-f5O" firstAttribute="leading" secondItem="Hip-vo-FT7" secondAttribute="leading" id="TnQ-IY-GUa"/>
                             <constraint firstItem="Hip-vo-FT7" firstAttribute="leading" secondItem="cwm-cp-waP" secondAttribute="leading" id="U2c-7c-TZA"/>
                             <constraint firstItem="Zh1-Te-rzu" firstAttribute="top" secondItem="Hip-vo-FT7" secondAttribute="bottom" constant="25" id="Yd2-sd-aEy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ovO-By-5wm" secondAttribute="trailing" constant="10" id="k07-eT-EBT"/>
                             <constraint firstItem="EzF-mb-nER" firstAttribute="centerX" secondItem="FNd-kg-PlN" secondAttribute="centerX" id="n4V-pl-pNz"/>
                             <constraint firstAttribute="trailing" secondItem="IYf-dx-Bmn" secondAttribute="trailing" constant="10" id="qLa-JI-7qg"/>
                             <constraint firstItem="cwm-cp-waP" firstAttribute="top" secondItem="EzF-mb-nER" secondAttribute="bottom" constant="10" id="r69-jG-XAN"/>
@@ -194,8 +205,9 @@
                                 <exclude reference="F7B-ZO-WvO"/>
                                 <exclude reference="BVs-CI-Lmr"/>
                                 <exclude reference="U2c-7c-TZA"/>
-                                <exclude reference="IVj-88-qtZ"/>
                                 <exclude reference="4Zi-L8-ZbG"/>
+                                <exclude reference="IVj-88-qtZ"/>
+                                <exclude reference="k07-eT-EBT"/>
                             </mask>
                         </variation>
                     </view>
