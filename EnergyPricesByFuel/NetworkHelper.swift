@@ -10,13 +10,14 @@ import UIKit
 import Foundation
 
 protocol NetworkHelperDelegate {
-    func didReceiveprices(gas: Fuel, oil: Fuel)
+    func didReceiveprices(gas: Fuel, oil: Fuel, coal: Fuel)
 }
 
 class NetworkHelper {
     
     var gasPrice: Float?
     var oilPrice: Float?
+    var coalPrice: Float?
     
     var delegate: NetworkHelperDelegate?
     
@@ -26,6 +27,10 @@ class NetworkHelper {
     
     let eiaLinkBeg = String("https://api.eia.gov/series/?api_key=6495EB74AFCC6C24FFB6500DC2B9AB44&series_id=NG.N3050")
     let eiaLinkEnd = String("3.M")
+    
+    let eiaCoalLinkBeg = String("https://api.eia.gov/series/?api_key=6495EB74AFCC6C24FFB6500DC2B9AB44&series_id=COAL.COST.")
+    let eiaCoalLinkEnd = String("-98.Q")
+    
     
     func loadOilPrice() {
         // Get Yahoo Finance data for Brent with a query link
@@ -88,13 +93,44 @@ class NetworkHelper {
         task.resume()
     }
     
+    func loadCoalPriceForState(state: String) {
+        // Pass on state code to get link and get EIA coal price for the chosen location
+        let link = eiaCoalLinkBeg + state + eiaCoalLinkEnd
+        let url = NSURL(string: link)
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
+            guard let data = data else {
+                return
+            }
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+                if self.parseEIACoalPriceWithJSON(json) == nil {
+                    self.loadCoalPrice()
+                } else {
+                    self.coalPrice = self.parseEIACoalPriceWithJSON(json)
+                    print("coal price is \(self.coalPrice)")
+                    self.checkPricesAvailability()
+                }
+                
+            } catch {
+                print("could not read json")
+            }
+        }
+        task.resume()
+    }
+    
+    func loadCoalPrice() {
+        self.coalPrice = 50
+        self.checkPricesAvailability()
+    }
+    
     func checkPricesAvailability() {
-        if let gasPrice = gasPrice, oilPrice = oilPrice {
+        if let gasPrice = gasPrice, oilPrice = oilPrice, coalPrice = coalPrice {
             // adjust fetched fuel costs with conversion to MWh and adding O&M, assign to class variables
             oil.variableCostWithFuel = oilPrice / 6.5 * 8 + 3
             gas.variableCostWithFuel = gasPrice * 8 + 3
+            coal.variableCostWithFuel = coalPrice * 0.05 * 10.4 + 3
             
-            delegate?.didReceiveprices(gas, oil: oil)
+            delegate?.didReceiveprices(gas, oil: oil, coal: coal)
         }
     }
     
@@ -122,6 +158,19 @@ class NetworkHelper {
         }
         // print(latestGasPrice)
         return latestGasPrice
+    }
+    
+    func parseEIACoalPriceWithJSON(data: NSDictionary) -> Float? {
+        // parse EIA coal price data for a state and return the price
+        guard let series = data["series"] as? NSArray,
+            let seriesContent = series[0] as? NSDictionary,
+            let priceData = seriesContent["data"] as? NSArray,
+            let latestData = priceData[0] as? NSArray,
+            let latestCoalPrice = latestData[1] as? Float
+            else {
+                return nil
+        }
+        return latestCoalPrice
     }
     
     // data source: https://www.eia.gov/forecasts/aeo/pdf/electricity_generation.pdf

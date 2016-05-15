@@ -30,7 +30,6 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
       
         networkHelper.loadOilPrice()
         networkHelper.delegate = self
-        // load solar price
         
         // load background and title
         view.backgroundColor = UIColor(red: 0.09019608, green: 0.03137255, blue: 0.18431373, alpha: 1.0)
@@ -89,11 +88,13 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         super.viewDidAppear(animated)
         // check if a location is saved to userdefaults
         if let location = defaults.stringForKey("userlocation") {
-            // check location, if not in the locations dictionary then load generic gas price
+            // check location, if not in the locations dictionary then load generic gas and coal prices
             if locations.contains({ $0.values.contains(location) }) {
                 networkHelper.loadGasPriceForState(location)
+                networkHelper.loadCoalPriceForState(location)
             } else {
                 networkHelper.loadGasPrice()
+                networkHelper.loadCoalPrice()
             }
             userLocation = location
             
@@ -103,7 +104,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         print("location code: \(userLocation)")
     }
     
-    func didReceiveprices(gas: Fuel, oil: Fuel) {
+    func didReceiveprices(gas: Fuel, oil: Fuel, coal: Fuel) {
         // Replace oil
         fuel.removeAtIndex(5)
         fuel.insert(oil, atIndex: 5)
@@ -112,7 +113,11 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
         fuel.removeAtIndex(4)
         fuel.insert(gas, atIndex: 4)
         
-        // Replace Solar - TO DO
+        // Replace coal
+        fuel.removeAtIndex(3)
+        fuel.insert(coal, atIndex: 3)
+        
+        // Replace Solar
         updateSolar()
         
         dispatch_async(dispatch_get_main_queue(), {
