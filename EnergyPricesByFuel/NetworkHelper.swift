@@ -92,7 +92,7 @@ class NetworkHelper {
         if let gasPrice = gasPrice, oilPrice = oilPrice {
             // adjust fetched fuel costs with conversion to MWh and adding O&M, assign to class variables
             oil.variableCostWithFuel = oilPrice * 10 / 6.5
-            gas.variableCostWithFuel = gasPrice * 10
+            gas.variableCostWithFuel = gasPrice * 8 + 3
             
             delegate?.didReceiveprices(gas, oil: oil)
         }
