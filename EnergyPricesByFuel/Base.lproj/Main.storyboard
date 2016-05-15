@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-Te-FKr" customClass="GraphView" customModule="EnergyPricesByFuel">
                                 <rect key="frame" x="28" y="134" width="552" height="416"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costs of Electricity Generation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-dZ-ozG">
-                                <rect key="frame" x="184" y="84" width="233" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costs of Electricity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-dZ-ozG">
+                                <rect key="frame" x="228" y="84" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="290" y="106" width="20" height="20"/>
                                 <color key="color" red="0.56470588235294117" green="0.83137254901960778" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-fg-SUC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-fg-SUC">
                                 <rect key="frame" x="565" y="565" width="25" height="25"/>
                                 <state key="normal" image="info"/>
                                 <connections>
@@ -119,7 +119,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-vo-FT7">
                                 <rect key="frame" x="183" y="238" width="234" height="24"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Commodity prices powered by">
+                                    <fragment content="Commodity prices sourced from">
                                         <attributes>
                                             <color key="NSColor" red="0.090196078431372548" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
@@ -129,10 +129,10 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eia" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-V6-f5O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eia" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-V6-f5O">
                                 <rect key="frame" x="197" y="291" width="58" height="43"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoofiance" translatesAutoresizingMaskIntoConstraints="NO" id="Zh1-Te-rzu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="yahoofiance" translatesAutoresizingMaskIntoConstraints="NO" id="Zh1-Te-rzu">
                                 <rect key="frame" x="285" y="301" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="9cW-2e-cfq"/>
