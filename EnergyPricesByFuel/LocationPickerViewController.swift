@@ -19,7 +19,12 @@ class LocationPickerViewController: UITableViewController, CLLocationManagerDele
         super.viewDidLoad()
         
         locationManager.delegate = self
-        
+        if locations.count == 0 {
+            loadLocations()
+        }
+    }
+    
+    func loadLocations() {
         // load the states as an array of dicts from the plist "states"
         let plistPath = NSBundle.mainBundle().pathForResource("States", ofType: "plist")
         if let path = plistPath, let states = NSArray(contentsOfFile: path) {
