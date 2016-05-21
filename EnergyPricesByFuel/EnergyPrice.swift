@@ -33,7 +33,7 @@ class Fuel {
 }
 
 // Wind
-var wind = Fuel(fuelType: "Wind", levelizedCapitalCost: 58, fixedOMCost: 13, variableCostWithFuel: 0, transmissionInvestment: 3)
+var wind = Fuel(fuelType: "Wind Onshore", levelizedCapitalCost: 58, fixedOMCost: 13, variableCostWithFuel: 0, transmissionInvestment: 3)
 
 // Solar PV
 var solar = Fuel(fuelType: "Solar PV", levelizedCapitalCost: 110, fixedOMCost: 11, variableCostWithFuel: 0, transmissionInvestment: 4)

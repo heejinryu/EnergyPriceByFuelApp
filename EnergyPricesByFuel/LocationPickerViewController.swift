@@ -2,8 +2,8 @@
 //  LocationPickerViewController.swift
 //  EnergyPricesByFuel
 //
-//  Created by HEEJIN RYU, MEI TAO on 4/16/16.
-//  Copyright © 2016 HEEJIN RYU & MEI TAO. All rights reserved.
+//  Created by MEI TAO on 4/16/16.
+//  Copyright © 2016 MEI TAO. All rights reserved.
 //
 
 import UIKit

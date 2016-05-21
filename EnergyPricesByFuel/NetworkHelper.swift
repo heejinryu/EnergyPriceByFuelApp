@@ -3,7 +3,7 @@
 //  EnergyPricesByFuel
 //
 //  Created by Mei Tao on 4/23/16.
-//  Copyright © 2016 HEEJIN RYU, MEI TAO. All rights reserved.
+//  Copyright © 2016 MEI TAO. All rights reserved.
 //
 
 import UIKit
