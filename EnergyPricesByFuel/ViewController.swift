@@ -17,6 +17,7 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
     @IBOutlet weak var graph: GraphView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var locationText: UIButton!
     
     let networkHelper = NetworkHelper()
     
@@ -98,11 +99,14 @@ class ViewController: UIViewController, GraphDelegate, NetworkHelperDelegate {
             if locations.contains({ $0.values.contains(location) }) {
                 networkHelper.loadGasPriceForState(location)
                 networkHelper.loadCoalPriceForState(location)
+                userLocation = location
+                locationText.setTitle(userLocation, forState: .Normal)
             } else {
                 networkHelper.loadGasPrice()
                 networkHelper.loadCoalPrice()
+                userLocation = location
+                locationText.setTitle("U.S. Average", forState: .Normal)
             }
-            userLocation = location
             
         } else {
             performSegueWithIdentifier("showLocationPicker", sender: self)

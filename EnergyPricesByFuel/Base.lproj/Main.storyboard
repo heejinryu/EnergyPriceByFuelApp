@@ -58,10 +58,21 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="8zt-Do-9Cr"/>
+                    <navigationItem key="navigationItem" id="8zt-Do-9Cr">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PIg-WR-B83">
+                            <rect key="frame" x="224" y="7" width="152" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                            <state key="normal" title="U.S. Average">
+                                <color key="titleColor" red="0.090196078430000007" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="graph" destination="HBo-Te-FKr" id="j0k-uf-lvJ"/>
                         <outlet property="loadingIndicator" destination="kCY-4d-JZV" id="kYj-Me-XQ0"/>
+                        <outlet property="locationText" destination="PIg-WR-B83" id="zie-Sv-EaG"/>
                         <outlet property="titleLabel" destination="yPh-dZ-ozG" id="cs5-Lb-Vvt"/>
                         <segue destination="JIN-ns-cWX" kind="presentation" identifier="showLocationPicker" id="wjT-Gx-oLV"/>
                     </connections>
